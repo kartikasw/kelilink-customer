@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/margin_component_more"
+    android:paddingHorizontal="@dimen/margin_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/isc_iv_store"
+        android:layout_width="@dimen/image_view_item_store"
+        android:layout_height="@dimen/image_view_item_store"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/isc_line"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="@dimen/margin_component"
+        android:background="@drawable/dots"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/isc_iv_store"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/isc_tv_title"
+        style="@style/TextAppearance.Kelilink.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_component_small"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toTopOf="@+id/isc_tv_category"
+        app:layout_constraintStart_toStartOf="@+id/isc_tv_category" />
+
+    <TextView
+        android:id="@+id/isc_tv_category"
+        style="@style/TextAppearance.Kelilink.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_component_small"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toTopOf="@+id/isc_line"
+        app:layout_constraintStart_toStartOf="@+id/isc_line" />
+
+    <TextView
+        android:id="@+id/isc_tv_status"
+        style="@style/TextAppearance.Kelilink.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_component_small"
+        android:text="Tutup"
+        android:textColor="@color/orange"
+        app:layout_constraintStart_toStartOf="@id/isc_line"
+        app:layout_constraintTop_toBottomOf="@+id/isc_line"
+        tools:ignore="HardcodedText,TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

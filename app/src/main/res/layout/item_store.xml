@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/margin_component_more"
+    android:paddingHorizontal="@dimen/margin_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/is_iv_store"
+        android:layout_width="@dimen/image_view_item_store"
+        android:layout_height="@dimen/image_view_item_store"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/is_line"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="@dimen/margin_component"
+        android:background="@drawable/dots"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/is_iv_store"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/is_tv_title"
+        style="@style/TextAppearance.Kelilink.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_component_small"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/is_tv_category"
+        app:layout_constraintEnd_toEndOf="@+id/is_line"
+        app:layout_constraintStart_toStartOf="@+id/is_tv_category" />
+
+    <TextView
+        android:id="@+id/is_tv_category"
+        style="@style/TextColorGray"
+        android:textAppearance="@style/TextAppearance.Kelilink.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_component_small"
+        app:layout_constraintBottom_toTopOf="@+id/is_line"
+        app:layout_constraintStart_toStartOf="@+id/is_line" />
+
+    <TextView
+        android:id="@+id/is_tv_distance"
+        style="@style/TextColorGray"
+        android:textAppearance="@style/TextAppearance.Kelilink.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/margin_component_extra_small"
+        android:layout_marginTop="@dimen/margin_component_small"
+        app:layout_constraintStart_toStartOf="@+id/is_line"
+        app:layout_constraintTop_toBottomOf="@+id/is_line"
+        android:gravity="center"
+        app:drawableStartCompat="@drawable/ic_location_outline"
+        app:drawableTint="@color/dark_gray" />
+
+    <TextView
+        android:id="@+id/is_tv_status"
+        style="@style/TextAppearance.Kelilink.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/orange"
+        android:layout_marginTop="@dimen/margin_component_small"
+        app:layout_constraintStart_toStartOf="@+id/is_tv_distance"
+        app:layout_constraintTop_toBottomOf="@+id/is_tv_distance"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

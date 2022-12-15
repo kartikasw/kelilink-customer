@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.4" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.25" />
+
+            <TextView
+                android:id="@+id/pds_tv_time"
+                style="@style/TextAppearance.Kelilink.Caption"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_layout"
+                android:background="@drawable/shimmer_placeholder"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/pds_tv_name"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pds_tv_name"
+                style="@style/TextAppearance.Kelilink.Heading6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shimmer_placeholder"
+                android:layout_marginHorizontal="@dimen/margin_layout"
+                android:layout_marginTop="@dimen/margin_component"
+                app:layout_constraintTop_toBottomOf="@+id/pds_tv_time" />
+
+            <TextView
+                android:id="@+id/pds_tv_category"
+                style="@style/TextAppearance.Kelilink.Caption"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_component"
+                android:background="@drawable/shimmer_placeholder"
+                app:layout_constraintEnd_toStartOf="@+id/guideline7"
+                app:layout_constraintStart_toStartOf="@+id/pds_tv_name"
+                app:layout_constraintTop_toBottomOf="@+id/pds_tv_name" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/flexboxLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_component_more"
+                android:paddingVertical="@dimen/margin_component"
+                app:layout_constraintTop_toBottomOf="@+id/pds_tv_category">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_component_small"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        style="@style/TextAppearance.Kelilink.Caption"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/margin_component_small"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/shimmer_placeholder" />
+
+                    <TextView
+                        style="@style/TextAppearance.Kelilink.Caption"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_component_small"
+                        android:background="@drawable/shimmer_placeholder"/>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/view_line"
+                    android:background="@color/shimmer_placeholder"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline3"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/pds_tv_inqueue"
+                        style="@style/TextAppearance.Kelilink.Caption"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/margin_component_small"
+                        android:background="@drawable/shimmer_placeholder"/>
+
+                    <TextView
+                        style="@style/TextAppearance.Kelilink.Caption"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_component_small"
+                        android:background="@drawable/shimmer_placeholder"/>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView5"
+                style="@style/TextAppearance.Kelilink.Subtitle2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_layout"
+                android:background="@drawable/shimmer_placeholder"
+                app:layout_constraintEnd_toStartOf="@+id/guideline7"
+                app:layout_constraintStart_toStartOf="@+id/pds_tv_name"
+                app:layout_constraintTop_toBottomOf="@+id/flexboxLayout" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/margin_component_more"
+                android:background="@drawable/dots"
+                app:layout_constraintEnd_toEndOf="@+id/pds_tv_name"
+                app:layout_constraintStart_toStartOf="@+id/pds_tv_name"
+                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:flexWrap="wrap"
+                app:justifyContent="space_around"
+                android:layout_marginTop="@dimen/margin_component_more"
+                app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                <include layout="@layout/item_placeholder_menu" />
+
+                <include layout="@layout/item_placeholder_menu" />
+
+                <include layout="@layout/item_placeholder_menu" />
+
+                <include layout="@layout/item_placeholder_menu" />
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

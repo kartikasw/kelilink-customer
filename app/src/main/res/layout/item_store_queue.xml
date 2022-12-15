@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingVertical="@dimen/margin_component_more"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/margin_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/isq_iv_store"
+        android:layout_width="@dimen/image_view_item_store"
+        android:layout_height="@dimen/image_view_item_store"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/isq_tv_title"
+        style="@style/TextAppearance.Kelilink.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_component_small"
+        android:layout_marginStart="@dimen/margin_component_more"
+        app:layout_constraintStart_toEndOf="@+id/isq_iv_store"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/isq_tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Kelilink.Caption"
+        android:textColor="@color/dark_gray"
+        android:layout_marginTop="@dimen/margin_component_small"
+        app:layout_constraintStart_toStartOf="@id/isq_tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/isq_tv_title" />
+
+    <TextView
+        android:id="@+id/isq_tv_status"
+        style="@style/TextAppearance.Kelilink.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/orange"
+        android:layout_marginTop="@dimen/margin_component_small"
+        app:layout_constraintStart_toStartOf="@+id/isq_tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/isq_tv_price" />
+
+    <TextView
+        android:id="@+id/isq_tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextColorGray"
+        android:textAppearance="@style/TextAppearance.Kelilink.Caption"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

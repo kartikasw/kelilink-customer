@@ -1,0 +1,140 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Kelilink</string>
+
+    <string name="page_transaction">Pesanan</string>
+    <string name="page_profile">Profil</string>
+    <string name="page_edit_profile">Ubah Profil</string>
+    <string name="page_edit_password">Ubah Kata Sandi</string>
+    <string name="page_forgot_password">Lupa Kata Sandi</string>
+
+    <string name="tab_transaction_queue">Mengantri</string>
+    <string name="tab_transaction_invoice">Selesai</string>
+
+    <string name="bottom_nav_menu_home">Beranda</string>
+    <string name="bottom_nav_menu_order">Pesanan</string>
+
+    <string name="btn_register">Daftar</string>
+    <string name="btn_login">Masuk</string>
+    <string name="btn_add">Tambah</string>
+    <string name="btn_order">Pesan</string>
+    <string name="btn_save">Simpan</string>
+    <string name="btn_back">Kembali</string>
+    <string name="btn_cancel">Batal</string>
+    <string name="btn_send">Kirim</string>
+    <string name="btn_logout">Keluar</string>
+    <string name="btn_to_detail_order">Ke detail pesanan</string>
+    <string name="btn_to_login">Ke halaman masuk</string>
+
+    <string name="menu_edit_profile">Ubah Profil</string>
+    <string name="menu_edit_password">Ubah Kata Sandi</string>
+    <string name="menu_edit_email">Ubah Email</string>
+    <string name="menu_logout">Keluar</string>
+    <string name="menu_report">Buat Laporan</string>
+
+    <!-- Auth -->
+    <string name="title_register">Daftarkan Akun Anda</string>
+    <string name="content_register">Daftar untuk menggunakan layanan Kelilink</string>
+    <string name="title_login">Masuk ke Akun Anda</string>
+    <string name="content_login">Masuk untuk menggunakan layanan Kelilink</string>
+    <string name="title_logout">Keluar</string>
+    <string name="content_logout">Anda yakin ingin keluar?</string>
+    <string name="content_have_count">Sudah punya akun?</string>
+    <string name="content_dont_have_count">Belum punya akun?</string>
+    <string name="content_forget_password">Lupa kata sandi?</string>
+
+    <string name="title_user_location">Lokasi Anda</string>
+    <string name="title_category">Kategori</string>
+    <string name="title_recommendation">Rekomendasi</string>
+    <string name="title_menu">Menu</string>
+    <string name="title_add_note">Tambah catatan</string>
+    <string name="title_distance">Jarak</string>
+    <string name="title_queue">Antrean</string>
+    <string name="title_queue_order">Urutan antrean</string>
+    <string name="title_order_location">Lokasi Ambil</string>
+    <string name="title_detail_order">Detail Order</string>
+    <string name="title_total">Total</string>
+    <string name="title_account">Akun</string>
+    <string name="title_other">Lainnya</string>
+    <string name="title_time">Waktu pemesanan</string>
+    <string name="title_order_id">ID pesanan</string>
+
+    <string name="title_verify_email">Verifikasi Email</string>
+    <string name="content_verify_email">Link verifikasi telah dikirim ke &lt;b>%1$s&lt;/b>. Segera cek email Anda dan tekan tombol verifikasi untuk melanjutkan proses pendaftaran.</string>
+
+    <string name="title_store_empty">Pedagang tidak ditemukan</string>
+    <string name="content_store_empty">Kembali beberapa saat untuk menunggu pedagang berjualan.</string>
+    <string name="title_order_empty">Tidak ada pesanan</string>
+    <string name="content_order_empty">Pesan menu dari pedagang kaki lima melalui fitur rekomendasi.</string>
+
+    <string name="title_order_send">Pesanan Sedang Dikirim</string>
+    <string name="content_order_send">Mohon tunggu balasan dari pedagang. Jangan keluar dari aplikasi.</string>
+    <string name="title_order_accepted">Terima Kasih!</string>
+    <string name="content_order_accepted">Pesananmu segera dibuat, mohon tunggu beberapa saat.</string>
+    <string name="title_order_declined">Pesananmu Ditolak :(</string>
+    <string name="content_order_declined">Coba pesan lagi setelah beberapa saat.</string>
+    <string name="title_order_declined_busy">Pesanan Tidak Diterima</string>
+    <string name="content_order_declined_busy">Coba pesan lagi setelah beberapa saat.</string>
+    <string name="title_cant_order_menu">Tidak Bisa Memesan</string>
+
+    <string name="title_email">Email</string>
+    <string name="content_reset_password">Isi dengan email yang Anda gunakan ketika mendaftar akun.</string>
+
+    <string name="hint_name">Nama</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_note">contoh: jangan pedas, banyakin bawang gorangnya.</string>
+    <string name="hint_password">Kata Sandi</string>
+    <string name="hint_password_confirmation">Konfirmasi Kata Sandi</string>
+    <string name="hint_password_new">Kata Sandi Baru</string>
+    <string name="hint_password_old">Kata Sandi Lama</string>
+    <string name="hint_phone_number">Nomor Telepon</string>
+    <string name="hint_price">Harga</string>
+    <string name="hint_unit">Satuan</string>
+    <string name="hint_store_name">Nama Dagangan</string>
+
+    <string name="placeholder_location">Memuat…</string>
+    <string name="placeholder_whatsapp_message">Saya (nama), domisili (nama daerah), ingin mengajukan laporan mengenai (maksud)</string>
+    <string name="placeholder_basket">Keranjang • 0 Item</string>
+    <string name="placeholder_price">Rp0</string>
+
+    <string name="error_field_empty">Data harus diisi</string>
+    <string name="error_field_email">Email tidak valid</string>
+    <string name="error_field_password">Kata sandi terlalu pendek</string>
+    <string name="error_field">Periksa data Anda kembali</string>
+    <string name="error_location">Lokasi tidak ditemukan</string>
+    <string name="error_password_confirmation">Kata sandi tidak sama</string>
+
+    <string name="state_on_developed">Fitur sedang dikembangkan</string>
+    <string name="state_loading" tools:ignore="TypographyEllipsis">Sedang memuat...</string>
+    <string name="state_loading_order" tools:ignore="TypographyEllipsis">Membuat pesanan...</string>
+
+    <string name="distance_format">%1$s km</string>
+    <string name="total_queue_format">%1$d orang</string>
+    <string name="queue_format">Sedang di antrean ke-%1$d</string>
+    <string name="menu_amount_format">%1$dx</string>
+    <string name="basket_format">Keranjang • %1$d Item</string>
+
+    <string-array name="category_name">
+        <item>Bakso</item>
+        <item>Minuman</item>
+        <item>Es Krim</item>
+        <item>Jajanan</item>
+        <item>Buah</item>
+        <item>Sayuran</item>
+        <item>Nasi</item>
+        <item>Sate</item>
+    </string-array>
+
+    <string-array name="category_icon">
+        <item>@drawable/category_bakso</item>
+        <item>@drawable/category_minuman</item>
+        <item>@drawable/category_eskrim</item>
+        <item>@drawable/category_jajanan</item>
+        <item>@drawable/category_buah</item>
+        <item>@drawable/category_sayuran</item>
+        <item>@drawable/category_nasi</item>
+        <item>@drawable/category_sate</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

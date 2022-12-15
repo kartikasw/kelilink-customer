@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.order.store.StoreActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/dp_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:liftOnScroll="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/dp_toolbar_collapse"
+            android:layout_width="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            android:layout_height="@dimen/image_view_store"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/s_iv_store"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@color/gray"
+                app:layout_collapseMode="parallax"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/s_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:layout_collapseMode="pin">
+
+                <ImageButton
+                    android:id="@+id/s_ib_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_image_button"
+                    android:padding="@dimen/margin_component_small"
+                    android:src="@drawable/ic_back"
+                    tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swipe_refresh"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="?actionBarSize">
+
+                <include
+                    android:id="@+id/s_layout_info"
+                    android:visibility="invisible"
+                    layout="@layout/content_store_info"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <include
+                    android:id="@+id/s_loading"
+                    layout="@layout/placeholder_detail_store"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <include
+                    android:id="@+id/s_empty"
+                    android:visibility="invisible"
+                    layout="@layout/state_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    app:layout_constraintTop_toBottomOf="@id/s_layout_info"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/s_rv_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_marginHorizontal="@dimen/margin_layout"
+                    android:layout_marginTop="@dimen/margin_component_more"
+                    app:layout_constraintTop_toBottomOf="@+id/s_layout_info" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/BottomSheetTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margin_layout"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <View
+            android:id="@+id/dp_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/s_btn_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_layout"
+            android:background="@drawable/bg_button_primary"
+            android:padding="@dimen/margin_component"
+            app:justifyContent="space_between"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/dp_view"
+            android:layout_marginTop="@dimen/margin_layout">
+
+            <TextView
+                android:id="@+id/s_tv_item"
+                style="@style/TextAppearance.Kelilink.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/placeholder_basket"
+                android:textColor="@color/white"
+                tools:ignore="TextContrastCheck"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp" />
+
+            <TextView
+                android:id="@+id/dp_tv_price"
+                style="@style/TextAppearance.Kelilink.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/placeholder_price"
+                android:textColor="@color/white"
+                tools:ignore="TextContrastCheck"
+                tools:layout_editor_absoluteX="343dp"
+                tools:layout_editor_absoluteY="8dp" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

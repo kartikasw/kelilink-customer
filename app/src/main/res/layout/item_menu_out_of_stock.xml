@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/image_view_menu"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="@dimen/margin_layout">
+
+    <ImageView
+        android:id="@+id/imoos_iv_menu"
+        android:layout_width="@dimen/image_view_menu"
+        android:layout_height="@dimen/image_view_menu"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/imoos_tv_title"
+        style="@style/TextAppearance.Kelilink.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_component_small"
+        android:textColor="@color/gray"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        app:layout_constraintTop_toBottomOf="@+id/imoos_iv_menu" />
+
+    <TextView
+        android:id="@+id/imoos_tv_price"
+        style="@style/TextAppearance.Kelilink.Body2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_component_small"
+        android:textColor="@color/gray"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        app:layout_constraintTop_toBottomOf="@+id/imoos_tv_title" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_small"
+        android:layout_marginTop="@dimen/margin_component"
+        android:text="Stok habis"
+        android:textAppearance="@style/TextAppearance.Kelilink.Body2"
+        android:textColor="@color/orange"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imoos_tv_price" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

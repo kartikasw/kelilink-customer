@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/margin_component"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        style="@style/TextAppearance.Kelilink.Subtitle2"
+        android:id="@+id/io_tv_amount"
+        android:layout_width="@dimen/image_view_order_amount"
+        android:layout_height="@dimen/image_view_order_amount"
+        android:background="@drawable/shimmer_placeholder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/orange"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/io_tv_name"
+        style="@style/TextAppearance.Kelilink.Body2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_component_more"
+        android:background="@drawable/shimmer_placeholder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/io_tv_amount"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

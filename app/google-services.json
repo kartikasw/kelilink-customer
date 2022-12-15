@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "250833184807",
+    "project_id": "summer-4865e",
+    "storage_bucket": "summer-4865e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:250833184807:android:40e0c7f6792c633b108602",
+        "android_client_info": {
+          "package_name": "com.example.kelilink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "250833184807-so7vdf729u4632er10aih672rr837ovj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMxuwjUs6UzeuAfY_YKQK7ERJz9VKBvM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "250833184807-so7vdf729u4632er10aih672rr837ovj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

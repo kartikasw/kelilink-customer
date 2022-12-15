@@ -1,0 +1,39 @@
+<resources>
+    <dimen name="margin_layout">16dp</dimen>
+    <dimen name="margin_layout_more">32dp</dimen>
+    <dimen name="margin_layout_extra">64dp</dimen>
+
+    <dimen name="margin_component_extra_small">3dp</dimen>
+    <dimen name="margin_component_small">5dp</dimen>
+    <dimen name="margin_component">8dp</dimen>
+    <dimen name="margin_component_more">12dp</dimen>
+    <dimen name="margin_component_extra">20dp</dimen>
+
+    <dimen name="image_view_category">60dp</dimen>
+    <dimen name="image_view_item_store">90dp</dimen>
+    <dimen name="image_view_logo">48dp</dimen>
+    <dimen name="image_view_map">75dp</dimen>
+    <dimen name="image_view_menu">160dp</dimen>
+    <dimen name="image_view_order_amount">35dp</dimen>
+    <dimen name="image_view_profile">40dp</dimen>
+    <dimen name="image_view_store">250dp</dimen>
+    <dimen name="image_view_state">250dp</dimen>
+
+    <dimen name="button_small">40dp</dimen>
+    <dimen name="button_menu">40dp</dimen>
+    <dimen name="button">48dp</dimen>
+
+    <dimen name="corner_action_bar">15dp</dimen>
+    <dimen name="corner_search">12dp</dimen>
+    <dimen name="corner_button">8dp</dimen>
+    <dimen name="corner_image">10dp</dimen>
+
+    <dimen name="height_search">35dp</dimen>
+
+    <dimen name="height_text_input">48dp</dimen>
+    <dimen name="height_indicator">5dp</dimen>
+    <dimen name="width_indicator">100dp</dimen>
+
+
+    <dimen name="view_line">40dp</dimen>
+</resources>

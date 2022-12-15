@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#221E1F</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#00D115</color>
+
+    <!-- App Colors -->
+    <color name="orange">#E55116</color>
+    <color name="light_orange">#ECA285</color>
+    <color name="light_yellow">#FDF1CC</color>
+    <color name="yellow">#F7B700</color>
+
+    <!-- Gray -->
+    <color name="light_gray">#FAFAFA</color>
+    <color name="gray">#B2B7BB</color>
+    <color name="dark_gray">#757575</color>
+    <color name="shimmer_placeholder">#DDDDDD</color>
+    <color name="line">#E9E9E9</color>
+</resources>

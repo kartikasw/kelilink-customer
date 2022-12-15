@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/p_guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.3"
+                android:orientation="vertical"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/p_guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.7"
+                android:orientation="vertical"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/p_guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.2"
+                android:orientation="vertical"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/p_guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.8"
+                android:orientation="vertical"/>
+
+            <ImageView
+                android:id="@+id/p_iv_profile"
+                android:layout_width="@dimen/image_view_item_store"
+                android:layout_height="@dimen/image_view_item_store"
+                android:src="@drawable/shimmer_placeholder_oval"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/margin_layout_more"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/p_tv_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_component_extra"
+                android:background="@drawable/shimmer_placeholder"
+                android:textAppearance="@style/TextAppearance.Kelilink.Heading6"
+                app:layout_constraintEnd_toStartOf="@+id/p_guideline2"
+                app:layout_constraintStart_toStartOf="@+id/p_guideline1"
+                app:layout_constraintTop_toBottomOf="@+id/p_iv_profile" />
+
+            <TextView
+                android:id="@+id/p_tv_phone_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_component_small"
+                android:background="@drawable/shimmer_placeholder"
+                android:textAppearance="@style/TextAppearance.Kelilink.Caption"
+                app:layout_constraintEnd_toStartOf="@+id/p_guideline4"
+                app:layout_constraintStart_toStartOf="@+id/p_guideline3"
+                app:layout_constraintTop_toBottomOf="@id/p_tv_name" />
+
+            <TextView
+                android:id="@+id/p_tv_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_component_small"
+                android:textAppearance="@style/TextAppearance.Kelilink.Caption"
+                android:background="@drawable/shimmer_placeholder"
+                app:layout_constraintEnd_toStartOf="@+id/p_guideline2"
+                app:layout_constraintStart_toStartOf="@+id/p_guideline1"
+                app:layout_constraintTop_toBottomOf="@id/p_tv_phone_number" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

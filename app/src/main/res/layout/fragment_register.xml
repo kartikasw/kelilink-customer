@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".features.auth.register.RegisterFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/r_iv_logo"
+            android:layout_width="@dimen/image_view_category"
+            android:layout_height="@dimen/image_view_category"
+            android:src="@drawable/logo"
+            android:layout_marginTop="?actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/r_tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/title_register"
+            android:layout_marginTop="@dimen/margin_component_extra"
+            android:textAppearance="@style/TextAppearance.Kelilink.Heading6"
+            app:layout_constraintTop_toBottomOf="@+id/r_iv_logo" />
+
+        <TextView
+            android:id="@+id/r_tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_component_more"
+            android:text="@string/content_register"
+            android:textAppearance="@style/TextAppearance.Kelilink.Body2"
+            app:layout_constraintTop_toBottomOf="@+id/r_tv_title" />
+
+        <com.example.kelilink.util.costum_view.KelilinkEditText
+            android:id="@+id/r_et_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_text_input"
+            android:layout_marginTop="@dimen/margin_layout_more"
+            android:hint="@string/hint_name"
+            android:singleLine="true"
+            android:autofillHints="name"
+            android:inputType="text"
+            android:textAppearance="@style/TextAppearance.Kelilink.Body1"
+            android:layout_marginHorizontal="@dimen/margin_layout"
+            android:paddingHorizontal="@dimen/margin_component_more"
+            app:layout_constraintTop_toBottomOf="@+id/r_tv_content"
+            tools:ignore="TextContrastCheck"/>
+
+        <com.example.kelilink.util.costum_view.KelilinkEditText
+            android:id="@+id/r_et_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_text_input"
+            android:layout_marginTop="@dimen/margin_component_extra"
+            android:hint="@string/hint_phone_number"
+            android:autofillHints="phone"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.Kelilink.Body1"
+            android:inputType="number"
+            android:paddingHorizontal="@dimen/margin_component_more"
+            android:layout_marginHorizontal="@dimen/margin_layout"
+            app:layout_constraintTop_toBottomOf="@+id/r_et_name"
+            tools:ignore="TextContrastCheck" />
+
+        <com.example.kelilink.util.costum_view.KelilinkEditText
+            android:id="@+id/r_et_email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_text_input"
+            android:layout_marginTop="@dimen/margin_component_extra"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            android:textAppearance="@style/TextAppearance.Kelilink.Body1"
+            android:paddingHorizontal="@dimen/margin_component_more"
+            android:layout_marginHorizontal="@dimen/margin_layout"
+            app:layout_constraintTop_toBottomOf="@+id/r_et_phone_number"
+            tools:ignore="TextContrastCheck"/>
+
+        <com.example.kelilink.util.costum_view.KelilinkEditText
+            android:id="@+id/r_et_password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_text_input"
+            android:layout_marginTop="@dimen/margin_component_extra"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:paddingHorizontal="@dimen/margin_component_more"
+            app:layout_constraintTop_toBottomOf="@+id/r_et_email"
+            tools:ignore="TextContrastCheck"
+            android:layout_marginHorizontal="@dimen/margin_layout" />
+
+        <EditText
+            android:id="@+id/r_et_password_confirmation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_text_input"
+            android:layout_marginTop="@dimen/margin_component_extra"
+            android:hint="@string/hint_password_confirmation"
+            android:inputType="textPassword"
+            android:paddingHorizontal="@dimen/margin_component_more"
+            app:layout_constraintTop_toBottomOf="@+id/r_et_password"
+            tools:ignore="TextContrastCheck"
+            android:layout_marginHorizontal="@dimen/margin_layout"
+            android:importantForAutofill="no" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/l_btn_register"
+            style="@style/Widget.Kelilink.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_component"
+            android:text="@string/btn_register"
+            android:textAppearance="@style/TextAppearance.Kelilink.Body1"
+            android:layout_marginHorizontal="@dimen/margin_layout"
+            android:layout_marginTop="@dimen/margin_layout_extra"
+            app:layout_constraintTop_toBottomOf="@+id/r_et_password_confirmation"
+            tools:ignore="TextContrastCheck" />
+
+        <LinearLayout
+            android:id="@+id/l_layout_dont_have_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_component_more"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/margin_layout_extra"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/l_btn_register"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                style="@style/TextAppearance.Kelilink.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/content_have_count" />
+
+            <TextView
+                android:id="@+id/l_btn_login"
+                style="@style/TextAppearance.Kelilink.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_component_small"
+                android:text="@string/btn_login"
+                android:textColor="@color/orange"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

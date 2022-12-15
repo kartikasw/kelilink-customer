@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.auth.register.VerifyEmailActivity">
+
+    <ImageView
+        android:layout_marginTop="?actionBarSize"
+        android:id="@+id/ve_iv_illustration"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/image_view_state"
+        android:src="@drawable/email_verification"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ve_tv_title"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin_component_more"
+        android:text="@string/title_verify_email"
+        android:textAppearance="@style/TextAppearance.Kelilink.Body1"
+        app:layout_constraintTop_toBottomOf="@+id/ve_iv_illustration" />
+
+    <TextView
+        android:id="@+id/ve_tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin_component"
+        android:layout_marginHorizontal="@dimen/margin_layout_more"
+        android:textAppearance="@style/TextAppearance.Kelilink.Body2"
+        app:layout_constraintTop_toBottomOf="@+id/ve_tv_title" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ve_btn_move"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Kelilink.Button"
+        app:layout_constraintTop_toBottomOf="@id/ve_tv_content"
+        android:layout_marginHorizontal="@dimen/margin_layout_more"
+        android:layout_marginTop="@dimen/margin_component_more"
+        android:text="@string/btn_to_login"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

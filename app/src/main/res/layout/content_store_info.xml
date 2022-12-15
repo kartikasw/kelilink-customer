@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/csi_tv_store_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAppearance="@style/TextAppearance.Kelilink.Heading6"/>
+
+    <TextView
+        android:id="@+id/csi_tv_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_component"
+        android:textAppearance="@style/TextAppearance.Kelilink.Caption"
+        app:layout_constraintTop_toBottomOf="@id/csi_tv_store_name"
+        app:layout_constraintStart_toStartOf="@id/csi_tv_store_name"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/flexboxLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/BackgroundStoreInfo"
+        android:layout_marginTop="@dimen/margin_component"
+        android:paddingVertical="@dimen/margin_component_more"
+        app:layout_constraintTop_toBottomOf="@+id/csi_tv_category">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/csi_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <LinearLayout
+            android:id="@+id/csi_layout_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/csi_guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/csi_tv_distance"
+                style="@style/TextAppearance.Kelilink.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/margin_component_small"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/ic_location" />
+
+            <TextView
+                style="@style/TextAppearance.Kelilink.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_distance" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="1dp"
+            android:layout_height="@dimen/view_line"
+            android:background="@color/line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/csi_guideline"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/csi_tv_queue"
+                style="@style/TextAppearance.Kelilink.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/margin_component_small"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/ic_people" />
+
+            <TextView
+                style="@style/TextAppearance.Kelilink.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_queue" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/s_tv_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_component_more"
+        android:text="@string/title_menu"
+        android:textAppearance="@style/TextAppearance.Kelilink.Subtitle2"
+        android:textColor="@color/orange"
+        app:layout_constraintStart_toStartOf="@+id/csi_tv_store_name"
+        app:layout_constraintTop_toBottomOf="@+id/flexboxLayout" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginHorizontal="@dimen/margin_layout"
+        android:background="@drawable/dots"
+        android:contentDescription="TODO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription,HardcodedText"
+        android:layout_marginTop="@dimen/margin_component_more"
+        app:layout_constraintTop_toBottomOf="@id/s_tv_menu"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

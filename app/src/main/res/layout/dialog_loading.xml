@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ProgressBar
+        android:id="@+id/dl_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textAppearance="@style/TextAppearance.Kelilink.Body1"
+        android:id="@+id/dl_tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextColorGray"
+        android:layout_marginStart="@dimen/margin_layout"
+        android:text="@string/state_loading"
+        app:layout_constraintBottom_toBottomOf="@+id/dl_progress_bar"
+        app:layout_constraintStart_toEndOf="@+id/dl_progress_bar"
+        app:layout_constraintTop_toTopOf="@+id/dl_progress_bar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

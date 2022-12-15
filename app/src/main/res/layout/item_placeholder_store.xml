@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/margin_component_more"
+    android:paddingHorizontal="@dimen/margin_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/ip_iv_pkl"
+        android:layout_width="@dimen/image_view_item_store"
+        android:layout_height="@dimen/image_view_item_store"
+        android:src="@drawable/shimmer_placeholder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="@dimen/margin_component"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ip_iv_pkl"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/ip_tv_title"
+        style="@style/TextAppearance.Kelilink.Body2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_component_small"
+        android:background="@drawable/shimmer_placeholder"
+        app:layout_constraintBottom_toTopOf="@+id/ip_tv_category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ip_tv_category" />
+
+    <TextView
+        android:id="@+id/ip_tv_category"
+        style="@style/TextAppearance.Kelilink.Caption"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_component_small"
+        android:background="@drawable/shimmer_placeholder"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/ip_tv_distance"
+        style="@style/TextAppearance.Kelilink.Caption"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray"
+        android:layout_marginTop="@dimen/margin_component_small"
+        android:background="@drawable/shimmer_placeholder"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/ip_tv_status"
+        style="@style/TextAppearance.Kelilink.Caption"
+        android:textStyle="italic"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/orange"
+        android:background="@drawable/shimmer_placeholder"
+        android:layout_marginTop="@dimen/margin_component_small"
+        app:layout_constraintStart_toStartOf="@+id/ip_tv_distance"
+        app:layout_constraintTop_toBottomOf="@+id/ip_tv_distance"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

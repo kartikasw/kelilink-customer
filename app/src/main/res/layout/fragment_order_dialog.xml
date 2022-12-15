@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_component_extra">
+
+    <ProgressBar
+        android:id="@+id/od_progress"
+        android:visibility="visible"
+        android:indeterminateTint="@color/yellow"
+        android:layout_width="@dimen/image_view_category"
+        android:layout_height="@dimen/image_view_category" />
+
+    <ImageView
+        android:id="@+id/od_iv_icon"
+        android:layout_width="@dimen/image_view_category"
+        android:layout_height="@dimen/image_view_category"
+        android:visibility="gone"
+        android:src="@drawable/ic_success"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/od_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_component_more"
+        android:text="@string/title_order_send"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.Kelilink.Body1"/>
+
+    <TextView
+        android:id="@+id/od_tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/content_order_send"
+        android:layout_marginTop="@dimen/margin_component"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.Kelilink.Body1"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/od_btn_move"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        style="@style/Widget.Kelilink.Button"
+        android:layout_marginTop="@dimen/margin_component_extra"/>
+
+</LinearLayout>
