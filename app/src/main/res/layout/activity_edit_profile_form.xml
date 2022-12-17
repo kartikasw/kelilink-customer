@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.example.kelilink.util.costum_view.KelilinkEditText
+            <com.kartikasw.kelilink.util.costum_view.KelilinkEditText
                 android:id="@+id/ep_et_field_1"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_text_input"
@@ -40,7 +40,7 @@
                 android:singleLine="true"
                 tools:layout_editor_absoluteX="16dp" />
 
-            <com.example.kelilink.util.costum_view.KelilinkEditText
+            <com.kartikasw.kelilink.util.costum_view.KelilinkEditText
                 android:id="@+id/ep_et_field_2"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_text_input"

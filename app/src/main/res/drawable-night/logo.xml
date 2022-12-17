@@ -11,6 +11,6 @@
 
     <item
         android:gravity="center"
-        android:drawable="@drawable/ic_logo_application_foreground" />
+        android:drawable="@drawable/ic_logo" />
 
 </layer-list>

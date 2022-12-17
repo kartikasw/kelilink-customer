@@ -20,7 +20,7 @@
 
     <style name="Theme.Kelilink.Starting" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/yellow</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_logo_application_foreground</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_logo</item>
         <item name="windowSplashScreenAnimationDuration">200</item>
         <item name="postSplashScreenTheme">@style/Theme.Kelilink</item>
     </style>

@@ -8,12 +8,12 @@
 
     <fragment
         android:id="@+id/bottom_nav_home"
-        android:name="com.example.kelilink.features.recommendation.home.HomeFragment"
+        android:name="com.kartikasw.kelilink.features.recommendation.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/bottom_nav_transaction"
-        android:name="com.example.kelilink.features.transaction.TransactionFragment"
+        android:name="com.kartikasw.kelilink.features.transaction.TransactionFragment"
         android:label="fragment_transaction"
         tools:layout="@layout/fragment_transaction" />
 

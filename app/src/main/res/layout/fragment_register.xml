@@ -41,7 +41,7 @@
             android:textAppearance="@style/TextAppearance.Kelilink.Body2"
             app:layout_constraintTop_toBottomOf="@+id/r_tv_title" />
 
-        <com.example.kelilink.util.costum_view.KelilinkEditText
+        <com.kartikasw.kelilink.util.costum_view.KelilinkEditText
             android:id="@+id/r_et_name"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_text_input"
@@ -56,7 +56,7 @@
             app:layout_constraintTop_toBottomOf="@+id/r_tv_content"
             tools:ignore="TextContrastCheck"/>
 
-        <com.example.kelilink.util.costum_view.KelilinkEditText
+        <com.kartikasw.kelilink.util.costum_view.KelilinkEditText
             android:id="@+id/r_et_phone_number"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_text_input"
@@ -71,7 +71,7 @@
             app:layout_constraintTop_toBottomOf="@+id/r_et_name"
             tools:ignore="TextContrastCheck" />
 
-        <com.example.kelilink.util.costum_view.KelilinkEditText
+        <com.kartikasw.kelilink.util.costum_view.KelilinkEditText
             android:id="@+id/r_et_email"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_text_input"
@@ -84,7 +84,7 @@
             app:layout_constraintTop_toBottomOf="@+id/r_et_phone_number"
             tools:ignore="TextContrastCheck"/>
 
-        <com.example.kelilink.util.costum_view.KelilinkEditText
+        <com.kartikasw.kelilink.util.costum_view.KelilinkEditText
             android:id="@+id/r_et_password"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_text_input"
