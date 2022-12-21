@@ -19,7 +19,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ContentDescription" />
+            android:contentDescription="@string/content_description_logo"/>
 
         <TextView
             android:id="@+id/r_tv_title"
@@ -45,14 +45,14 @@
             android:id="@+id/r_et_name"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_text_input"
-            android:layout_marginTop="@dimen/margin_layout_more"
-            android:hint="@string/hint_name"
-            android:singleLine="true"
-            android:autofillHints="name"
-            android:inputType="text"
-            android:textAppearance="@style/TextAppearance.Kelilink.Body1"
             android:layout_marginHorizontal="@dimen/margin_layout"
+            android:layout_marginTop="@dimen/margin_layout_more"
+            android:autofillHints="name"
+            android:hint="@string/hint_name"
+            android:inputType="text"
             android:paddingHorizontal="@dimen/margin_component_more"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.Kelilink.Body1"
             app:layout_constraintTop_toBottomOf="@+id/r_tv_content"
             tools:ignore="TextContrastCheck"/>
 
@@ -60,14 +60,14 @@
             android:id="@+id/r_et_phone_number"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_text_input"
+            android:layout_marginHorizontal="@dimen/margin_layout"
             android:layout_marginTop="@dimen/margin_component_extra"
-            android:hint="@string/hint_phone_number"
             android:autofillHints="phone"
-            android:singleLine="true"
-            android:textAppearance="@style/TextAppearance.Kelilink.Body1"
+            android:hint="@string/hint_phone_number"
             android:inputType="number"
             android:paddingHorizontal="@dimen/margin_component_more"
-            android:layout_marginHorizontal="@dimen/margin_layout"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.Kelilink.Body1"
             app:layout_constraintTop_toBottomOf="@+id/r_et_name"
             tools:ignore="TextContrastCheck" />
 
@@ -75,12 +75,12 @@
             android:id="@+id/r_et_email"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_text_input"
+            android:layout_marginHorizontal="@dimen/margin_layout"
             android:layout_marginTop="@dimen/margin_component_extra"
             android:hint="@string/hint_email"
             android:inputType="textEmailAddress"
-            android:textAppearance="@style/TextAppearance.Kelilink.Body1"
             android:paddingHorizontal="@dimen/margin_component_more"
-            android:layout_marginHorizontal="@dimen/margin_layout"
+            android:textAppearance="@style/TextAppearance.Kelilink.Body1"
             app:layout_constraintTop_toBottomOf="@+id/r_et_phone_number"
             tools:ignore="TextContrastCheck"/>
 
@@ -88,26 +88,26 @@
             android:id="@+id/r_et_password"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_text_input"
+            android:layout_marginHorizontal="@dimen/margin_layout"
             android:layout_marginTop="@dimen/margin_component_extra"
             android:hint="@string/hint_password"
             android:inputType="textPassword"
             android:paddingHorizontal="@dimen/margin_component_more"
             app:layout_constraintTop_toBottomOf="@+id/r_et_email"
-            tools:ignore="TextContrastCheck"
-            android:layout_marginHorizontal="@dimen/margin_layout" />
+            tools:ignore="TextContrastCheck" />
 
         <EditText
             android:id="@+id/r_et_password_confirmation"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_text_input"
+            android:layout_marginHorizontal="@dimen/margin_layout"
             android:layout_marginTop="@dimen/margin_component_extra"
             android:hint="@string/hint_password_confirmation"
+            android:importantForAutofill="no"
             android:inputType="textPassword"
             android:paddingHorizontal="@dimen/margin_component_more"
             app:layout_constraintTop_toBottomOf="@+id/r_et_password"
-            tools:ignore="TextContrastCheck"
-            android:layout_marginHorizontal="@dimen/margin_layout"
-            android:importantForAutofill="no" />
+            tools:ignore="TextContrastCheck"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/l_btn_register"
@@ -119,8 +119,7 @@
             android:textAppearance="@style/TextAppearance.Kelilink.Body1"
             android:layout_marginHorizontal="@dimen/margin_layout"
             android:layout_marginTop="@dimen/margin_layout_extra"
-            app:layout_constraintTop_toBottomOf="@+id/r_et_password_confirmation"
-            tools:ignore="TextContrastCheck" />
+            app:layout_constraintTop_toBottomOf="@+id/r_et_password_confirmation" />
 
         <LinearLayout
             android:id="@+id/l_layout_dont_have_account"

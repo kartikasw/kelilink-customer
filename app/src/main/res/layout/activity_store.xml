@@ -28,7 +28,7 @@
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true"
                 android:scaleType="centerCrop"
-                android:src="@color/gray"
+                android:src="@color/shimmer_placeholder"
                 app:layout_collapseMode="parallax"
                 tools:ignore="ContentDescription,ImageContrastCheck" />
 
@@ -43,9 +43,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_image_button"
+                    android:contentDescription="@string/content_description_icon"
                     android:padding="@dimen/margin_component_small"
                     android:src="@drawable/ic_back"
-                    tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck" />
 
             </com.google.android.material.appbar.MaterialToolbar>
 

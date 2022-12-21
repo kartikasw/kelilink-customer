@@ -9,13 +9,16 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.kartikasw.kelilink.R
-import com.kartikasw.kelilink.core.data.helper.Constants
+import com.kartikasw.kelilink.core.data.helper.Constants.DatabaseColumn.EMAIL_COLUMN
+import com.kartikasw.kelilink.core.data.helper.Constants.DatabaseColumn.FCM_TOKEN_COLUMN
+import com.kartikasw.kelilink.core.data.helper.Constants.DatabaseColumn.NAME_COLUMN
+import com.kartikasw.kelilink.core.data.helper.Constants.DatabaseColumn.PHONE_NUMBER_COLUMN
 import com.kartikasw.kelilink.core.data.helper.Constants.Extra.EXTRA_EMAIL
 import com.kartikasw.kelilink.core.domain.Resource
 import com.kartikasw.kelilink.databinding.FragmentRegisterBinding
 import com.kartikasw.kelilink.util.costum_view.KelilinkLoadingDialog
-import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -64,16 +67,15 @@ class RegisterFragment : Fragment() {
         if(
             name.error == null && phoneNumber.error == null && email.error == null
             && password.error == null && nameData.isNotEmpty() && phoneNumberData.isNotEmpty()
-            && emailData.isNotEmpty() && passwordData.isNotEmpty() && token.isNotEmpty()
-            && passwordConfirmation.error == null
+            && emailData.isNotEmpty() && passwordData.isNotEmpty() && passwordConfirmation.error == null
         ) {
             if(passwordData == passwordConfirmationData) {
                 emailVerification = emailData
                 val user = mutableMapOf(
-                    Constants.DatabaseColumn.EMAIL_COLUMN to emailData,
-                    Constants.DatabaseColumn.NAME_COLUMN to nameData,
-                    Constants.DatabaseColumn.PHONE_NUMBER_COLUMN to phoneNumberData as Any,
-                    Constants.DatabaseColumn.FCM_TOKEN_COLUMN to token
+                    EMAIL_COLUMN to emailData,
+                    NAME_COLUMN to nameData,
+                    PHONE_NUMBER_COLUMN to phoneNumberData as Any,
+                    FCM_TOKEN_COLUMN to token
                 )
 
                 viewModel

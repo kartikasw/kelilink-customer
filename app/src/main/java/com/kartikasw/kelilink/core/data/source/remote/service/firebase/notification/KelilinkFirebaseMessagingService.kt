@@ -25,9 +25,9 @@ class KelilinkFirebaseMessagingService: FirebaseMessagingService() {
 
         private var sharedPref: KelilinkPreference? = null
 
-        var token: String? = null
+        var token: String = ""
             set(value) {
-                sharedPref?.setFcmToken(token!!)
+                sharedPref?.setFcmToken(token)
                 field = value
             }
     }
@@ -50,8 +50,8 @@ class KelilinkFirebaseMessagingService: FirebaseMessagingService() {
             applicationContext,
             0,
             contentIntent,
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
             } else {
                 PendingIntent.FLAG_UPDATE_CURRENT
             }

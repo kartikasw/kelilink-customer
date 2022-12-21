@@ -1,27 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.facebook.shimmer.ShimmerFrameLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        <include layout="@layout/item_placeholder_store"/>
+        <include layout="@layout/item_placeholder_store"/>
 
-            <include layout="@layout/item_placeholder_store"/>
-            <include layout="@layout/item_placeholder_store"/>
-            <include layout="@layout/item_placeholder_store"/>
-            <include layout="@layout/item_placeholder_store"/>
-            <include layout="@layout/item_placeholder_store"/>
-            <include layout="@layout/item_placeholder_store"/>
-            <include layout="@layout/item_placeholder_store"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-    </com.facebook.shimmer.ShimmerFrameLayout>
-
-</ScrollView>
+</com.facebook.shimmer.ShimmerFrameLayout>

@@ -9,10 +9,92 @@
       "client_info": {
         "mobilesdk_app_id": "1:250833184807:android:40e0c7f6792c633b108602",
         "android_client_info": {
+          "package_name": "com.example.kelilink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "250833184807-9sdv81826h8fis73oqn329c3oqfkfavb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kelilink",
+            "certificate_hash": "7161be5135c06c75f236e8dc7b3605c98d213dc7"
+          }
+        },
+        {
+          "client_id": "250833184807-so7vdf729u4632er10aih672rr837ovj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMxuwjUs6UzeuAfY_YKQK7ERJz9VKBvM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "250833184807-so7vdf729u4632er10aih672rr837ovj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:250833184807:android:40fa744a71c5aa05108602",
+        "android_client_info": {
+          "package_name": "com.example.kelilinkseller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "250833184807-15ngqldkou3c5u57ms1nkcp2vqlhdgog.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kelilinkseller",
+            "certificate_hash": "7161be5135c06c75f236e8dc7b3605c98d213dc7"
+          }
+        },
+        {
+          "client_id": "250833184807-so7vdf729u4632er10aih672rr837ovj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMxuwjUs6UzeuAfY_YKQK7ERJz9VKBvM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "250833184807-so7vdf729u4632er10aih672rr837ovj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:250833184807:android:67878c9baa19254c108602",
+        "android_client_info": {
           "package_name": "com.kartikasw.kelilink"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "250833184807-9kfscojf8q93nqptven2glkaofahm4rj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kartikasw.kelilink",
+            "certificate_hash": "6f5e59968d01a143c754c73769ecedefd129af82"
+          }
+        },
         {
           "client_id": "250833184807-so7vdf729u4632er10aih672rr837ovj.apps.googleusercontent.com",
           "client_type": 3

@@ -32,12 +32,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_text_input"
                 android:layout_marginHorizontal="@dimen/margin_layout"
+                android:layout_marginTop="@dimen/margin_layout"
+                android:hint="@string/hint_password"
                 android:paddingHorizontal="@dimen/margin_component_more"
+                android:singleLine="true"
                 android:textAppearance="@style/TextAppearance.Kelilink.Body1"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="TextContrastCheck"
-                android:layout_marginTop="@dimen/margin_layout"
-                android:singleLine="true"
                 tools:layout_editor_absoluteX="16dp" />
 
             <com.kartikasw.kelilink.util.costum_view.KelilinkEditText
@@ -45,12 +46,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_text_input"
                 android:layout_marginHorizontal="@dimen/margin_layout"
+                android:layout_marginTop="@dimen/margin_component_extra"
+                android:hint="@string/hint_password_confirmation"
                 android:paddingHorizontal="@dimen/margin_component_more"
+                android:singleLine="true"
                 android:textAppearance="@style/TextAppearance.Kelilink.Body1"
                 app:layout_constraintTop_toBottomOf="@id/ep_et_field_1"
                 tools:ignore="TextContrastCheck"
-                android:layout_marginTop="@dimen/margin_component_extra"
-                android:singleLine="true"
                 tools:layout_editor_absoluteX="16dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -61,10 +63,8 @@
                 android:text="@string/btn_save"
                 android:layout_marginTop="@dimen/margin_layout_extra"
                 app:layout_constraintTop_toBottomOf="@+id/ep_et_field_2"
-                tools:ignore="TextContrastCheck"
                 app:layout_constraintEnd_toEndOf="@id/ep_et_field_2"
-                app:layout_constraintStart_toEndOf="@id/eo_guideline"
-                tools:layout_editor_absoluteX="16dp" />
+                app:layout_constraintStart_toEndOf="@id/eo_guideline" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/eo_guideline"

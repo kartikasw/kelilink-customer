@@ -62,8 +62,8 @@
     <string name="content_verify_email">Link verifikasi telah dikirim ke &lt;b>%1$s&lt;/b>. Segera cek email Anda dan tekan tombol verifikasi untuk melanjutkan proses pendaftaran.</string>
 
     <string name="title_store_empty">Pedagang tidak ditemukan</string>
-    <string name="content_store_empty">Kembali beberapa saat untuk menunggu pedagang berjualan.</string>
-    <string name="title_order_empty">Tidak ada pesanan</string>
+    <string name="content_store_empty">Kembali lagi saat pedagang berjualan.</string>
+    <string name="title_order_empty">Kamu belum pesan apapun</string>
     <string name="content_order_empty">Pesan menu dari pedagang kaki lima melalui fitur rekomendasi.</string>
 
     <string name="title_order_send">Pesanan Sedang Dikirim</string>
@@ -77,6 +77,7 @@
     <string name="title_cant_order_menu">Tidak Bisa Memesan</string>
 
     <string name="title_email">Email</string>
+    <string name="title_signed_email">Email Terdaftar</string>
     <string name="content_reset_password">Isi dengan email yang Anda gunakan ketika mendaftar akun.</string>
 
     <string name="hint_name">Nama</string>
@@ -112,6 +113,12 @@
     <string name="queue_format">Sedang di antrean ke-%1$d</string>
     <string name="menu_amount_format">%1$dx</string>
     <string name="basket_format">Keranjang • %1$d Item</string>
+
+    <string name="content_description_logo">Logo</string>
+    <string name="content_description_tab">Tab</string>
+    <string name="content_description_icon">Ikon</string>
+    <string name="content_description_line">Garis</string>
+    <string name="content_description_image">Gambar</string>
 
     <string-array name="category_name">
         <item>Bakso</item>

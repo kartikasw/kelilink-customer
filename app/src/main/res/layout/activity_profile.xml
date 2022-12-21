@@ -44,7 +44,6 @@
                android:textAppearance="@style/TextAppearance.Kelilink.Subtitle2"
                android:textColor="@color/orange"
                app:layout_constraintStart_toStartOf="parent"
-               tools:ignore="TextContrastCheck"
                android:layout_marginTop="@dimen/margin_layout_more"
                app:layout_constraintTop_toBottomOf="@+id/p_layout_profile"/>
 
@@ -81,8 +80,7 @@
                android:textColor="@color/orange"
                app:layout_constraintStart_toStartOf="parent"
                app:layout_constraintTop_toBottomOf="@id/p_btn_edit_password"
-               android:layout_marginTop="@dimen/margin_layout"
-               tools:ignore="TextContrastCheck" />
+               android:layout_marginTop="@dimen/margin_layout" />
 
            <TextView
                android:id="@+id/p_btn_report"
@@ -109,8 +107,7 @@
                android:textColor="@color/red"
                app:drawableStartCompat="@drawable/ic_exit"
                app:drawableTint="@color/red"
-               app:layout_constraintTop_toBottomOf="@+id/p_btn_report"
-               tools:ignore="TextContrastCheck" />
+               app:layout_constraintTop_toBottomOf="@+id/p_btn_report"/>
 
            <include
                android:id="@+id/p_loading"

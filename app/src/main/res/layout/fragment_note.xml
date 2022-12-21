@@ -53,31 +53,36 @@
         android:id="@+id/n_dots1"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:src="@drawable/dots"
         android:layout_marginTop="@dimen/margin_component"
+        android:contentDescription="@string/content_description_line"
+        android:src="@drawable/dots"
         app:layout_constraintTop_toBottomOf="@id/n_tv_title"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ImageContrastCheck"
+        tools:layout_editor_absoluteX="16dp" />
 
     <EditText
         android:id="@+id/n_et_note"
         android:layout_width="match_parent"
         android:layout_height="@dimen/image_view_store"
-        app:layout_constraintTop_toBottomOf="@id/n_dots1"
-        android:textAppearance="@style/TextAppearance.Kelilink.Body1"
-        android:paddingVertical="@dimen/margin_component"
-        android:gravity="top"
         android:background="@null"
+        android:gravity="top"
+        android:hint="@string/hint_note"
+        android:importantForAutofill="no"
         android:inputType="text|textMultiLine"
-        android:hint="@string/hint_note"/>
+        android:paddingVertical="@dimen/margin_component"
+        android:textAppearance="@style/TextAppearance.Kelilink.Body1"
+        app:layout_constraintTop_toBottomOf="@id/n_dots1" />
 
     <ImageView
         android:id="@+id/n_dots2"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:src="@drawable/dots"
         android:layout_marginTop="@dimen/margin_component"
+        android:contentDescription="@string/content_description_line"
+        android:src="@drawable/dots"
         app:layout_constraintTop_toBottomOf="@id/n_et_note"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ImageContrastCheck"
+        tools:layout_editor_absoluteX="16dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/n_btn_save"

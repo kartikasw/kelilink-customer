@@ -42,14 +42,15 @@
 
             <ImageButton
                 android:id="@+id/h_ib_profile"
-                android:layout_width="@dimen/image_view_profile"
-                android:layout_height="@dimen/image_view_profile"
+                android:layout_width="@dimen/button"
+                android:layout_height="@dimen/button"
                 android:background="@null"
+                android:contentDescription="@string/content_description_icon"
                 android:src="@drawable/ic_photo_profile"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="ContentDescription,TouchTargetSizeCheck,SpeakableTextPresentCheck,ImageContrastCheck" />
+                tools:ignore="ImageContrastCheck" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -80,8 +81,7 @@
                    android:textAppearance="@style/TextAppearance.Kelilink.Subtitle2"
                    android:textColor="@color/orange"
                    app:layout_constraintStart_toStartOf="parent"
-                   app:layout_constraintTop_toTopOf="parent"
-                   tools:ignore="TextContrastCheck" />
+                   app:layout_constraintTop_toTopOf="parent"/>
 
                <include
                    android:id="@+id/h_layout_rv_category"
@@ -102,8 +102,7 @@
                    android:textAppearance="@style/TextAppearance.Kelilink.Subtitle2"
                    android:textColor="@color/orange"
                    app:layout_constraintStart_toStartOf="parent"
-                   app:layout_constraintTop_toBottomOf="@+id/h_layout_rv_category"
-                   tools:ignore="TextContrastCheck" />
+                   app:layout_constraintTop_toBottomOf="@+id/h_layout_rv_category"/>
 
                <include
                    android:id="@+id/h_layout_rv_recommendation"

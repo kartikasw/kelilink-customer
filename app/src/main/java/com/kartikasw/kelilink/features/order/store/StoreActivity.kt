@@ -154,6 +154,7 @@ class StoreActivity : AppCompatActivity() {
         with(binding) {
             Glide.with(sIvStore.context)
                 .load(data.image)
+                .placeholder(R.drawable.shimmer_placeholder)
                 .into(sIvStore)
 
             var category = ""

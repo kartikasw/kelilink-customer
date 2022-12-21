@@ -10,10 +10,10 @@
             android:id="@+id/col_iv_map"
             android:layout_width="@dimen/image_view_map"
             android:layout_height="@dimen/image_view_map"
+            android:contentDescription="@string/content_description_icon"
             android:src="@drawable/map"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ContentDescription" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/col_tv_address"
@@ -45,6 +45,6 @@
             android:src="@drawable/ic_next"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ContentDescription" />
+            android:contentDescription="@string/content_description_icon"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

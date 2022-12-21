@@ -14,7 +14,7 @@
         android:layout_marginTop="@dimen/margin_layout_more"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ContentDescription" />
+        android:contentDescription="@string/content_description_icon"/>
 
     <TextView
         android:id="@+id/cp_tv_name"

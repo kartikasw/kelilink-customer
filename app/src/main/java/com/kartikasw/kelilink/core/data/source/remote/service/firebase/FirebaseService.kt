@@ -1,6 +1,8 @@
 package com.kartikasw.kelilink.core.data.source.remote.service.firebase
 
 import android.util.Log
+import androidx.compose.ui.res.stringResource
+import androidx.core.content.ContextCompat
 import com.kartikasw.kelilink.core.data.helper.Constants.DatabaseCollection.USER_COLLECTION
 import com.kartikasw.kelilink.core.data.helper.Constants.DatabaseColumn.ID_COLUMN
 import com.kartikasw.kelilink.core.data.helper.Constants.DatabaseColumn.TIME_COLUMN
@@ -13,6 +15,7 @@ import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.QuerySnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.kartikasw.kelilink.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.*
@@ -163,7 +166,6 @@ abstract class FirebaseService {
         list: List<Any>
     ): Flow<Response<ResponseType>> =
         flow {
-            Log.d(TAG, "1")
             firestore.runBatch {
                 list.forEach {
                     firestore
@@ -171,11 +173,7 @@ abstract class FirebaseService {
                         .document(docId)
                         .collection(subCollection)
                         .add(it)
-                    Log.d(TAG, "11")
-
                 }
-                Log.d(TAG, "111")
-
             }.await()
 
             emitAll(getDocumentById<ResponseType>(collection, docId))

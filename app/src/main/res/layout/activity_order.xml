@@ -79,9 +79,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_layout"
             android:text="@string/btn_order"
-            app:layout_constraintBottom_toBottomOf="parent"
-            tools:ignore="TextContrastCheck"
-            tools:layout_editor_absoluteX="16dp" />
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
