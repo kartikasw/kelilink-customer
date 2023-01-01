@@ -85,6 +85,7 @@ object Constants {
         const val READY = "ready"
         const val DONE = "done"
         const val DECLINED = "declined"
+        const val MISSED = "missed"
     }
 
 }

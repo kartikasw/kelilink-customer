@@ -60,6 +60,12 @@
 -dontwarn kotlinx.**
 
 
+##---------------Begin: proguard configuration for okhttp3 ----------
+-keep class com.squareup.okhttp.** { *; }
+-keep interface com.squareup.okhttp.** { *; }
+-dontwarn com.squareup.okhttp.**
+
+
 ##---------------Begin: proguard configuration for Glide ----------
 -keep public class * implements com.bumptech.glide.module.GlideModule
 -keep class * extends com.bumptech.glide.module.AppGlideModule {
@@ -72,3 +78,9 @@ public *;
 -keep class com.bumptech.glide.load.data.ParcelFileDescriptorRewinder$InternalRewinder {
 *** rewind();
 }
+
+##---------------Begin: proguard configuration for Firebase ----------
+-keep class com.firebase.** { *; }
+
+-keepclassmembers class com.kartikasw.kelilink.core.data.source.remote.response.** { *; }
+-keepclassmembers class com.kartikasw.kelilinkseller.core.domain.model.** { *; }

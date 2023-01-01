@@ -1,5 +1,6 @@
 package com.kartikasw.kelilink.core.data.source.remote.service.firebase
 
+import com.google.firebase.firestore.MetadataChanges
 import com.kartikasw.kelilink.core.data.helper.Constants.DatabaseCollection.INVOICE_COLLECTION
 import com.kartikasw.kelilink.core.data.helper.Constants.DatabaseCollection.MENU_COLLECTION
 import com.kartikasw.kelilink.core.data.helper.Constants.DatabaseCollection.ORDERS_COLLECTION
@@ -16,7 +17,6 @@ import com.kartikasw.kelilink.core.data.source.remote.response.MenuResponse
 import com.kartikasw.kelilink.core.data.source.remote.response.StoreResponse
 import com.kartikasw.kelilink.core.domain.model.Invoice
 import com.kartikasw.kelilink.core.domain.model.Order
-import com.google.firebase.firestore.MetadataChanges
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emitAll
@@ -24,7 +24,6 @@ import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 class StoreService @Inject constructor(): FirebaseService() {
-
     fun getAllStore(): Flow<Response<List<StoreResponse>>> =
         getDocumentByField(STORE_COLLECTION, OPERATING_STATUS_COLUMN, true)
 
@@ -72,7 +71,7 @@ class StoreService @Inject constructor(): FirebaseService() {
 
             var isAccepted = false
 
-            val listener = ref.addSnapshotListener(MetadataChanges.INCLUDE) { snapshot, e ->
+            var listener = ref.addSnapshotListener(MetadataChanges.INCLUDE) { snapshot, e ->
                 if (e != null) {
                     return@addSnapshotListener
                 }
@@ -84,7 +83,7 @@ class StoreService @Inject constructor(): FirebaseService() {
                 }
             }
 
-            delay(25000)
+            delay(15000)
 
             listener.remove()
 
@@ -101,7 +100,61 @@ class StoreService @Inject constructor(): FirebaseService() {
                     }
                 }
             } else {
+                listener = ref.addSnapshotListener(MetadataChanges.INCLUDE) { snapshot, e ->
+                    if (e != null) {
+                        return@addSnapshotListener
+                    }
+
+                    if (snapshot != null && snapshot.exists()) {
+                        if(snapshot.data?.get(STATUS_COLUMN) == COOKING) {
+                            isAccepted = true
+                        }
+                    }
+                }
+
+                delay(10000)
+
+                listener.remove()
+
+                if(isAccepted) {
+                    addValueToArrayOfDocument(STORE_COLLECTION, storeId, QUEUE_COLUMN, invoiceId).collect {
+                        when(it) {
+                            is Response.Success -> {
+                                emitAll(getDocumentById(INVOICE_COLLECTION, invoiceId))
+                            }
+                            is Response.Error -> {
+                                emit(Response.Error(it.errorMessage))
+                            }
+                            else -> {}
+                        }
+                    }
+                } else {
+                    emitAll(getDocumentById(INVOICE_COLLECTION, invoiceId))
+                }
+            }
+        }
+
+    private fun isOrderAccepted(isAccepted: Boolean, invoiceId: String, storeId: String): Flow<Response<InvoiceResponse>> =
+        flow {
+            if(isAccepted) {
+                addOrderToQueue(invoiceId, storeId)
+            } else {
                 emitAll(getDocumentById(INVOICE_COLLECTION, invoiceId))
+            }
+        }
+
+    private fun addOrderToQueue(invoiceId: String, storeId: String): Flow<Response<InvoiceResponse>> =
+        flow {
+            addValueToArrayOfDocument(STORE_COLLECTION, storeId, QUEUE_COLUMN, invoiceId).collect {
+                when(it) {
+                    is Response.Success -> {
+                        emitAll(getDocumentById(INVOICE_COLLECTION, invoiceId))
+                    }
+                    is Response.Error -> {
+                        emit(Response.Error(it.errorMessage))
+                    }
+                    else -> {}
+                }
             }
         }
 
