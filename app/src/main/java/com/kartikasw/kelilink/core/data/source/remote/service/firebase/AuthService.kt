@@ -5,6 +5,7 @@ import com.kartikasw.kelilink.core.data.helper.Constants.DatabaseColumn.FCM_TOKE
 import com.kartikasw.kelilink.core.data.helper.Constants.DatabaseColumn.UID_COLUMN
 import com.kartikasw.kelilink.core.data.helper.Response
 import com.kartikasw.kelilink.core.data.source.remote.response.UserResponse
+import com.kartikasw.kelilink.util.params.RegisterParam
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emitAll
 import kotlinx.coroutines.flow.flow
@@ -12,17 +13,17 @@ import javax.inject.Inject
 
 class AuthService @Inject constructor(): FirebaseService() {
 
-    fun register(email: String, password: String, user: MutableMap<String, Any>): Flow<Response<UserResponse>> =
+    fun register(param: RegisterParam): Flow<Response<UserResponse>> =
         flow {
-            createUserWithEmailAndPassword(email, password).collect {
+            createUserWithEmailAndPassword(param.email, param.password).collect {
                 when(it) {
                     is Response.Success -> {
-                        user[UID_COLUMN] = it.data
+                        param.user[UID_COLUMN] = it.data
                         emitAll(
                             setDocument(
                                 USER_COLLECTION,
                                 it.data,
-                                user
+                                param.user
                             )
                         )
                     }

@@ -13,6 +13,7 @@ import com.kartikasw.kelilink.core.data.source.remote.service.location.LocationA
 import com.kartikasw.kelilink.core.domain.model.Fcm
 import com.kartikasw.kelilink.core.domain.model.Invoice
 import com.kartikasw.kelilink.core.domain.model.Order
+import com.kartikasw.kelilink.util.params.RegisterParam
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
@@ -55,8 +56,8 @@ class RemoteDataSource @Inject constructor(
     * AUTH
     *
      */
-    fun register(email: String, password: String, user: MutableMap<String, Any>) =
-        auth.register(email, password, user)
+    fun register(param: RegisterParam) =
+        auth.register(param)
 
     fun logIn(email: String, password: String, fcmToken: String) =
         auth.logIn(email, password, fcmToken)

@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import com.kartikasw.kelilink.core.domain.use_case.auth.AuthUseCase
 import com.kartikasw.kelilink.core.domain.use_case.user.UserUseCase
+import com.kartikasw.kelilink.util.params.RegisterParam
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
@@ -13,8 +14,8 @@ class RegisterViewModel @Inject constructor(
     private val userUseCase: UserUseCase
 ): ViewModel() {
 
-    fun register(email: String, password: String, user: MutableMap<String, Any>) =
-        authUseCase.register(email, password, user).asLiveData()
+    fun register(param: RegisterParam) =
+        authUseCase.register(param).asLiveData()
 
     fun getFcmToken() =
         userUseCase.getFcmToken()

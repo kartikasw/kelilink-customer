@@ -19,6 +19,7 @@ import com.kartikasw.kelilink.core.data.helper.Constants.Extra.EXTRA_EMAIL
 import com.kartikasw.kelilink.core.domain.Resource
 import com.kartikasw.kelilink.databinding.FragmentRegisterBinding
 import com.kartikasw.kelilink.util.costum_view.KelilinkLoadingDialog
+import com.kartikasw.kelilink.util.params.RegisterParam
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -78,8 +79,12 @@ class RegisterFragment : Fragment() {
                     FCM_TOKEN_COLUMN to token
                 )
 
+                val registerParam = RegisterParam(
+                  nameData, passwordData, user
+                );
+
                 viewModel
-                    .register(emailData, passwordData, user)
+                    .register(registerParam)
                     .observe(viewLifecycleOwner, ::registerResponse)
             } else {
                 val errorText = requireContext().resources.getString(R.string.error_password_confirmation)

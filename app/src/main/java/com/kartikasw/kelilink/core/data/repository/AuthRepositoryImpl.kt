@@ -8,6 +8,7 @@ import com.kartikasw.kelilink.core.data.source.remote.RemoteDataSource
 import com.kartikasw.kelilink.core.data.source.remote.response.UserResponse
 import com.kartikasw.kelilink.core.domain.Resource
 import com.kartikasw.kelilink.core.domain.repository.AuthRepository
+import com.kartikasw.kelilink.util.params.RegisterParam
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flow
@@ -20,11 +21,11 @@ class AuthRepositoryImpl @Inject constructor(
     private val local: LocalDataSource
 ): AuthRepository {
 
-    override fun register(email: String, password: String, user: MutableMap<String, Any>): Flow<Resource<Unit>> =
+    override fun register(param: RegisterParam): Flow<Resource<Unit>> =
         object : NetworkBoundRequest<UserResponse>() {
 
             override suspend fun createCall(): Flow<Response<UserResponse>> =
-                remote.register(email, password, user)
+                remote.register(param)
 
             override suspend fun saveCallResult(data: UserResponse) {
                 local.deleteUser()
